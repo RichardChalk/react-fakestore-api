@@ -408,7 +408,8 @@ h2 {
   font-weight: 800;
 }
 
-.bi-star-fill {
+.bi-star-fill,
+.bi-star-half {
   color: orange;
 }
 

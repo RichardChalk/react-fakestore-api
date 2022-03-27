@@ -46,7 +46,37 @@ export const ProductInfo = (props) => {
               {props.chosenProduct.price.toFixed(0)}kr
             </p>
             <span>
-              <i className="bi bi-star-fill"></i>{" "}
+              {props.chosenProduct.rating.rate >= 1 ? (
+                <i className="bi bi-star-fill"></i>
+              ) : (
+                ""
+              )}
+              {props.chosenProduct.rating.rate >= 2 ? (
+                <i className="bi bi-star-fill"></i>
+              ) : (
+                ""
+              )}
+              {props.chosenProduct.rating.rate >= 3 ? (
+                <i className="bi bi-star-fill"></i>
+              ) : (
+                ""
+              )}
+              {props.chosenProduct.rating.rate >= 4 ? (
+                <i className="bi bi-star-fill"></i>
+              ) : (
+                ""
+              )}
+              {props.chosenProduct.rating.rate === 5 ? (
+                <i className="bi bi-star-fill"></i>
+              ) : (
+                ""
+              )}
+              {props.chosenProduct.rating.rate % 1 >= 0.5 ? (
+                <i class="bi bi-star-half"></i>
+              ) : (
+                ""
+              )}
+              <br></br>
               <span className="productinfo-rating">
                 {props.chosenProduct.rating.rate}
               </span>
