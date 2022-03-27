@@ -6,7 +6,7 @@ import { Main } from "./Components/Main";
 function App() {
   // I ONLY applied the theme to header & Footer
   // Mostly only for a bit of fun
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   const switchTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -32,6 +32,16 @@ function App() {
     });
   };
 
+  const removeFromCart = () => {
+    setCartTotal((prevCartTotal) => {
+      if (cartTotal > 0) {
+        return (prevCartTotal = cartTotal - 1);
+      } else {
+        return prevCartTotal;
+      }
+    });
+  };
+
   const addItemToCart = (product) => {
     const alreadyExistsInCart = shoppingCart.findIndex(
       (prod) => prod.item.id === product.item.id
@@ -47,10 +57,32 @@ function App() {
     }
   };
 
+  const removeItemFromCart = (product) => {
+    const alreadyExistsInCart = shoppingCart.findIndex(
+      (prod) => prod.item.id === product.item.id
+    );
+    let copyShoppingCart = [...shoppingCart];
+
+    if (copyShoppingCart[alreadyExistsInCart].quantity === 1) {
+      // delete copyShoppingCart[alreadyExistsInCart];
+
+      // copyShoppingCart = shoppingCart.splice(alreadyExistsInCart, 1);
+
+      copyShoppingCart = shoppingCart.filter((prod) => {
+        return prod.item.id !== product.item.id;
+      });
+    } else if (copyShoppingCart[alreadyExistsInCart].quantity > 1) {
+      copyShoppingCart[alreadyExistsInCart].quantity =
+        copyShoppingCart[alreadyExistsInCart].quantity - 1;
+    }
+
+    setShoppingCart(copyShoppingCart);
+  };
+
   // Used only for showing and checking content in the array
-  // useEffect(() => {
-  //   console.log(shoppingCart);
-  // }, [shoppingCart]);
+  useEffect(() => {
+    console.log(shoppingCart);
+  }, [shoppingCart]);
 
   return (
     <div className="myApp" data-theme={theme}>
@@ -68,7 +100,9 @@ function App() {
         onChangeChosenProduct={onChangeChosenProduct}
         chosenProduct={chosenProduct}
         addToCart={addToCart}
+        removeFromCart={removeFromCart}
         addItemToCart={addItemToCart}
+        removeItemFromCart={removeItemFromCart}
         shoppingCart={shoppingCart}
       />
       <Footer />

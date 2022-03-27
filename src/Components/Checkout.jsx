@@ -26,7 +26,9 @@ export const Checkout = (props) => {
             onChangeChosenProduct={props.onChangeChosenProduct}
             onChangeActivePage={props.onChangeActivePage}
             addToCart={props.addToCart}
+            removeFromCart={props.removeFromCart}
             addItemToCart={props.addItemToCart}
+            removeItemFromCart={props.removeItemFromCart}
             shoppingCart={props.shoppingCart}
           />
         ))}

@@ -9,9 +9,9 @@ export const Header = (props) => {
       <div className="logo">
         <i className="bi bi-shop"></i>
         <span className="logopart1"> RICH</span> Products
-        <i class="bi bi-brightness-high"></i>
+        <i className="bi bi-brightness-high"></i>
         <i className="bi bi-toggle-on" onClick={props.switchTheme}></i>
-        <i class="bi bi-moon"></i>
+        <i className="bi bi-moon"></i>
       </div>
       <nav>
         <ul className="navmenu">

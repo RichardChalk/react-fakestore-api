@@ -42,7 +42,18 @@ export const CheckoutProduct = (props) => {
             +
           </a>
           <span className="checkout-total-bought">{props.quantity}</span>
-          <a className="btn checkout-btn-remove">-</a>
+          <a
+            className="btn checkout-btn-remove"
+            onClick={() => {
+              props.removeFromCart();
+              props.removeItemFromCart({
+                item: props.product,
+                quantity: 1,
+              });
+            }}
+          >
+            -
+          </a>
         </div>
       </div>
     </div>

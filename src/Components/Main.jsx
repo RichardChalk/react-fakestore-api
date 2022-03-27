@@ -44,6 +44,8 @@ export const Main = (props) => {
           shoppingCart={props.shoppingCart}
           addToCart={props.addToCart}
           addItemToCart={props.addItemToCart}
+          removeFromCart={props.removeFromCart}
+          removeItemFromCart={props.removeItemFromCart}
         />
       ) : (
         ""

@@ -138,6 +138,7 @@ h2 {
 
 .trolley:hover {
   color: var(--cta-color);
+  cursor: pointer;
 }
 
 .cart-total {
