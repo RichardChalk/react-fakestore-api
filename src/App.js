@@ -4,6 +4,8 @@ import { Header } from "./Components/Header";
 import { Main } from "./Components/Main";
 
 function App() {
+  // I ONLY applied the theme to header & Footer
+  // Mostly only for a bit of fun
   const [theme, setTheme] = useState("light");
 
   const switchTheme = () => {
