@@ -1,4 +1,13 @@
-[
+export default [
+  {
+    id: 21,
+    title: ".NET Developer",
+    price: 1000,
+    description: ".NET Developer med 20 års erfarenhet!",
+    category: "IT consulting",
+    image: "/images/stefan-holmberg.jpg",
+    rating: { rate: 5, count: 1 },
+  },
   {
     id: 1,
     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",

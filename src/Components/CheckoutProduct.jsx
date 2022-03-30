@@ -6,7 +6,7 @@ export const CheckoutProduct = (props) => {
       <div className="checkout-productgallery_card_container">
         <img
           src={props.product.image}
-          alt="cookies"
+          alt="image"
           className="checkout-hero-image"
           onClick={() => {
             props.onChangeActivePage("ProductInfo");

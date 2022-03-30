@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Product } from "./Product";
-import { fetchProducts } from "./Data/ProductData";
+import { fetchProducts, fetchLocalProducts } from "./Data/ProductData";
 
 export const Products = (props) => {
   const [products, setProducts] = useState([]);
@@ -13,18 +13,37 @@ export const Products = (props) => {
     setFilteredProducts(filtered);
   };
 
-  useEffect(() => {
-    fetchProducts().then((result) => {
-      setProducts(result);
-      setFilteredProducts(result);
-    });
+  // ==============================================================
+  // Option 1 API - API - API - API - API - API - API - API - API -
+  // Option 1 API - API - API - API - API - API - API - API - API -
+  // Option 1 API - API - API - API - API - API - API - API - API -
+  // Option 1 API - API - API - API - API - API - API - API - API -
+  // useEffect(() => {
+  //   fetchProducts().then((result) => {
+  //     setProducts(result);
+  //     setFilteredProducts(result);
+  //   });
 
-    // Option 2
-    // const fetchData = async()=>{
-    //     const result = await fetchProducts()
-    //     setProducts(result)
-    //   }
-    //   fetchData()
+  //   // async await option
+  //   // const fetchData = async()=>{
+  //   //     const result = await fetchProducts()
+  //   //     setProducts(result)
+  //   //     setFilteredProducts(result);
+  //   //   }
+  //   //   fetchData()
+  // }, []);
+
+  // =========================================================================
+  // Option 2 Local data - Local data - Local data - Local data - Local data -
+  // Option 2 Local data - Local data - Local data - Local data - Local data -
+  // Option 2 Local data - Local data - Local data - Local data - Local data -
+  // Option 2 Local data - Local data - Local data - Local data - Local data -
+
+  // Jag valde Local data... jag var så trött på att API:n var upp o ner hela tiden
+  useEffect(() => {
+    const data = fetchLocalProducts();
+    setProducts(data);
+    setFilteredProducts(data);
   }, []);
 
   return (

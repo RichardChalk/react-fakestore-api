@@ -72,7 +72,7 @@ export const ProductInfo = (props) => {
                 ""
               )}
               {props.chosenProduct.rating.rate % 1 >= 0.5 ? (
-                <i class="bi bi-star-half"></i>
+                <i className="bi bi-star-half"></i>
               ) : (
                 ""
               )}

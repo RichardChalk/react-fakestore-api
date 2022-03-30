@@ -81,7 +81,7 @@ function App() {
 
   // Used only for showing and checking content in the array
   useEffect(() => {
-    console.log(shoppingCart);
+    //console.log(shoppingCart);
   }, [shoppingCart]);
 
   return (
