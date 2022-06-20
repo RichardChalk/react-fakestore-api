@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-fakestore-api/static/css/main.eb74248e.css",
+    "main.js": "/react-fakestore-api/static/js/main.4e726563.js",
+    "static/media/shop-bg.jpg": "/react-fakestore-api/static/media/shop-bg.8e3f5c243421e0303bc4.jpg",
+    "static/media/bootstrap-icons.woff?": "/react-fakestore-api/static/media/bootstrap-icons.c1d7432ee75fa194e499.woff",
+    "static/media/bootstrap-icons.woff2?": "/react-fakestore-api/static/media/bootstrap-icons.a13b815539b49de48d23.woff2",
+    "index.html": "/react-fakestore-api/index.html",
+    "main.eb74248e.css.map": "/react-fakestore-api/static/css/main.eb74248e.css.map",
+    "main.4e726563.js.map": "/react-fakestore-api/static/js/main.4e726563.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb74248e.css",
+    "static/js/main.4e726563.js"
+  ]
+}
