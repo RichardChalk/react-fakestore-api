@@ -18,20 +18,20 @@ export const Products = (props) => {
   // Option 1 API - API - API - API - API - API - API - API - API -
   // Option 1 API - API - API - API - API - API - API - API - API -
   // Option 1 API - API - API - API - API - API - API - API - API -
-  // useEffect(() => {
-  //   fetchProducts().then((result) => {
-  //     setProducts(result);
-  //     setFilteredProducts(result);
-  //   });
+  useEffect(() => {
+    fetchProducts().then((result) => {
+      setProducts(result);
+      setFilteredProducts(result);
+    });
 
-  //   // async await option
-  //   // const fetchData = async()=>{
-  //   //     const result = await fetchProducts()
-  //   //     setProducts(result)
-  //   //     setFilteredProducts(result);
-  //   //   }
-  //   //   fetchData()
-  // }, []);
+    // async await option
+    // const fetchData = async()=>{
+    //     const result = await fetchProducts()
+    //     setProducts(result)
+    //     setFilteredProducts(result);
+    //   }
+    //   fetchData()
+  }, []);
 
   // =========================================================================
   // Option 2 Local data - Local data - Local data - Local data - Local data -
@@ -40,11 +40,11 @@ export const Products = (props) => {
   // Option 2 Local data - Local data - Local data - Local data - Local data -
 
   // Jag valde Local data... jag var så trött på att API:n var upp o ner hela tiden
-  useEffect(() => {
-    const data = fetchLocalProducts();
-    setProducts(data);
-    setFilteredProducts(data);
-  }, []);
+  // useEffect(() => {
+  //   const data = fetchLocalProducts();
+  //   setProducts(data);
+  //   setFilteredProducts(data);
+  // }, []);
 
   return (
     <section className="products container" id="products">
