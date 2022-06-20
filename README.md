@@ -1,3 +1,6 @@
+# Regarding Fakestor-api
+Sometimes this API takes a while to respond. Please be patient
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
